@@ -7,22 +7,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: LoginedHome(),
-      theme: ThemeData(primarySwatch: Colors.red),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class LoginedHome extends StatelessWidget {
-  const LoginedHome({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Welcome"),
+        title: Text(
+          "Welcome",
+          style: TextStyle(color: Colors.red),
+        ),
       ),
       drawer: MyDrawer(),
     );
